@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+  php-cli:
+    build:
+      dockerfile: ./docker/php-cli/Dockerfile
+      context: ./
+    volumes:
+     - ./:/opt
