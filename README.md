@@ -7,7 +7,7 @@ This is a modern PHP package for interacting with ZenCash RPC commandline.
 
 ### Installation
 
-TODO
+`composer require vherus/zencash-rpc-client`
 
 ### Example Usage
 
