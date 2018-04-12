@@ -1,23 +1,26 @@
 {
-    "name": "vherus/package-bootstrap",
-    "description": "Bootstrap for developing PHP>=7.2 packages.",
+    "name": "vherus/ZenCash-Rpc-Client",
+    "description": "ZenCash PHP RPC client.",
     "license": "MIT",
     "authors": [
         {
             "name": "Nathan King (vherus)",
             "role": "Developer",
-            "email": "nathanking3590@gmail.com"
+            "email": "nathan@zensystem.io"
         }
     ],
     "require": {
-        "php": ">=7.2"
+        "php": ">=7.2",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/psr7": "^1.4"
     },
     "config": {
         "vendor-dir": "src/vendor"
     },
     "autoload": {
         "psr-4": {
-            "Vherus\\Bootstrap\\": ["tests/", "src/"]
+            "ZenCash\\Rpc\\": ["tests/", "src/"]
         }
     },
     "require-dev": {
