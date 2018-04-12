@@ -1,5 +1,7 @@
 # vherus/ZenCash-Rpc-Client
 
+[![Build Status](https://travis-ci.org/vherus/ZenCash-Rpc-Client.svg?branch=master)](https://travis-ci.org/vherus/ZenCash-Rpc-Client)
+
 This is a modern PHP package for interacting with ZenCash RPC commandline.
 
 ### Installation
