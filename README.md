@@ -12,7 +12,7 @@ The easiest way to use this package is by using the built in *native* RPC client
 
 ```php
 $rpc = new ZenCash\Rpc\Rpc('localhost', 'rpcuser', 'password');
-$client = ZenCash\Rpc\Native\Client($rpc, $guzzleHttpClient);
+$client = new ZenCash\Rpc\Native\Client($rpc, $guzzleHttpClient);
 
 // Client::execute returns a PSR7 HTTP Response object
 $response = $client->execute(new ZenCash\Rpc\Command\Wallet\GetNewAddress);
