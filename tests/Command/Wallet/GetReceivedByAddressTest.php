@@ -12,7 +12,7 @@ class GetReceivedByAddressTest extends TestCase
             'jsonrpc' => '1.0',
             'id'      => 'curl',
             'method'  => 'getreceivedbyaddress',
-            'params' => (object) ['testaddress', 1]
+            'params' => ['testaddress', 1]
         ];
 
         $this->assertEquals($expected, (new GetReceivedByAddress('testaddress'))->jsonSerialize());

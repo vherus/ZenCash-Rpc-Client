@@ -12,7 +12,7 @@ class ListTransactionsTest extends TestCase
             'jsonrpc' => '1.0',
             'id'      => 'curl',
             'method'  => 'listtransactions',
-            'params' => (object) [
+            'params' => [
                 '*',
                 10,
                 0,
@@ -29,7 +29,7 @@ class ListTransactionsTest extends TestCase
             'jsonrpc' => '1.0',
             'id'      => 'curl',
             'method'  => 'listtransactions',
-            'params' => (object) [
+            'params' => [
                 'account1',
                 27,
                 3,
