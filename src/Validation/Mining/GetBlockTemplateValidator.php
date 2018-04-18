@@ -7,6 +7,7 @@ use ZenCash\Rpc\Validation\JsonValidator;
 
 final class GetBlockTemplateValidator implements JsonValidator
 {
+    /** @throws JsonFormatException */
     public static function validate(string $json)
     {
         if (!$decoded = json_decode($json)) {
