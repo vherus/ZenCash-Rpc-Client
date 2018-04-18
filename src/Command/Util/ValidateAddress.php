@@ -20,7 +20,7 @@ final class ValidateAddress implements Command
             'jsonrpc' => Command::JSON_RPC_VERSION,
             'id'      => Command::ID,
             'method'  => self::METHOD,
-            'params' => [$this->address]
+            'params' => [ $this->address ]
         ];
     }
 }
