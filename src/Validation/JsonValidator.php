@@ -4,5 +4,5 @@ namespace ZenCash\Rpc\Validation;
 
 interface JsonValidator
 {
-    public static function validate(string $json);
+    public static function validate(string $json): void;
 }
