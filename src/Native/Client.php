@@ -26,6 +26,9 @@ final class Client implements IClient
     public function execute(Command $command): ResponseInterface
     {
         return $this->httpClient->request('POST', $this->rpc->getAddress(), [
+            'headers' => [
+                'Content-Type' => 'text/plain'
+            ],
             'auth' => [$this->rpc->getUser(), $this->rpc->getPassword()],
             'json' => $command
         ]);
