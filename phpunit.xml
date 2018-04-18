@@ -14,4 +14,14 @@
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src/</directory>
+            <exclude>
+                <directory suffix=".php">./src/vendor/</directory>
+                <file>./src/vendor/bootstrap.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>
