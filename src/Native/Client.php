@@ -29,7 +29,7 @@ final class Client implements IClient
             'headers' => [
                 'Content-Type' => 'text/plain'
             ],
-            'auth' => [$this->rpc->getUser(), $this->rpc->getPassword()],
+            'auth' => [ $this->rpc->getUser(), $this->rpc->getPassword() ],
             'json' => $command
         ]);
     }
