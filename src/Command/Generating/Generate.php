@@ -20,7 +20,7 @@ final class Generate implements Command
             'jsonrpc' => Command::JSON_RPC_VERSION,
             'id'      => Command::ID,
             'method'  => self::METHOD,
-            'params' => [$this->blocks]
+            'params' => [ $this->blocks ]
         ];
     }
 }

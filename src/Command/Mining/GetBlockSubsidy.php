@@ -24,6 +24,6 @@ final class GetBlockSubsidy implements Command
             'params' => [
                 $this->height
             ]
-        ] : []);
+        ] : [ ]);
     }
 }

@@ -31,6 +31,6 @@ final class GetBlockTemplate implements Command
             'params' => [
                 $this->json
             ]
-        ] : []);
+        ] : [ ]);
     }
 }

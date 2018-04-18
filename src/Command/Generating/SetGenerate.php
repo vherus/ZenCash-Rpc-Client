@@ -22,7 +22,7 @@ final class SetGenerate implements Command
             'jsonrpc' => Command::JSON_RPC_VERSION,
             'id'      => Command::ID,
             'method'  => self::METHOD,
-            'params' => array_merge([$this->generate], !is_null($this->limit) ? [$this->limit] : [])
+            'params' => array_merge([ $this->generate ], !is_null($this->limit) ? [ $this->limit ] : [ ])
         ];
     }
 }
