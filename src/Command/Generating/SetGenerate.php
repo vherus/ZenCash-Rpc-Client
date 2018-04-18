@@ -4,7 +4,7 @@ namespace ZenCash\Rpc\Command\Generating;
 
 use ZenCash\Rpc\Command;
 
-class SetGenerate implements Command
+final class SetGenerate implements Command
 {
     private const METHOD = 'setgenerate';
     private $generate;

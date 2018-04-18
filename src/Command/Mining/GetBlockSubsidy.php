@@ -4,7 +4,7 @@ namespace ZenCash\Rpc\Command\Mining;
 
 use ZenCash\Rpc\Command;
 
-class GetBlockSubsidy implements Command
+final class GetBlockSubsidy implements Command
 {
     private const METHOD = 'getblocksubsidy';
     private $height;
