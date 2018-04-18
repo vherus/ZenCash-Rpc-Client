@@ -20,7 +20,7 @@ final class SubmitBlock implements Command
             'jsonrpc' => Command::JSON_RPC_VERSION,
             'id'      => Command::ID,
             'method'  => self::METHOD,
-            'params' => [$this->hexData]
+            'params' => [ $this->hexData ]
         ];
     }
 }
