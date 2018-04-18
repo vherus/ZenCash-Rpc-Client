@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/vherus/ZenCash-Rpc-Client.svg?branch=master)](https://travis-ci.org/vherus/ZenCash-Rpc-Client)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vherus/ZenCash-Rpc-Client/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vherus/ZenCash-Rpc-Client/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/vherus/ZenCash-Rpc-Client/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/vherus/ZenCash-Rpc-Client/?branch=master)
 
 This is a modern PHP package for interacting with ZenCash RPC commandline.
 
