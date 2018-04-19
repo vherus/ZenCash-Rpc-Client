@@ -16,17 +16,8 @@ final class CreateRawTransaction implements Command
      */
     public function __construct(array $transactions, array $recipients)
     {
-        foreach ($transactions as $t) {
-            if (!$t instanceof RawTransaction) {
-                throw new \InvalidArgumentException("Invalid type within RawTransaction array: " . gettype($t));
-            }
-        }
-
-        foreach ($recipients as $r) {
-            if (!$r instanceof Recipient) {
-                throw new \InvalidArgumentException("Invalid type within Recipient array: " . gettype($r));
-            }
-        }
+        call_user_func_array(function (RawTransaction ...$t) {}, $transactions);
+        call_user_func_array(function (Recipient ...$r) {}, $recipients);
 
         $this->transactions = $transactions;
         $this->recipients = $recipients;
