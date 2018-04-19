@@ -29,7 +29,7 @@ final class SetBan implements Command
             'id'      => Command::ID,
             'method'  => self::METHOD,
             'params' => array_merge(
-                [ $this->ip, (string) $this->command],
+                [ $this->ip, (string) $this->command ],
                 !is_null($this->banTime) ? [ $this->banTime ] : [ ],
                 !is_null($this->absolute) && !is_null($this->banTime) ? [ $this->absolute ] : [ ]
             )

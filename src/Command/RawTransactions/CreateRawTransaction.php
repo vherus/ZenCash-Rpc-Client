@@ -16,8 +16,8 @@ final class CreateRawTransaction implements Command
      */
     public function __construct(array $transactions, array $recipients)
     {
-        call_user_func_array(function (RawTransaction ...$t) {}, $transactions);
-        call_user_func_array(function (Recipient ...$r) {}, $recipients);
+        call_user_func_array(function(RawTransaction ...$t) {}, $transactions);
+        call_user_func_array(function(Recipient ...$r) {}, $recipients);
 
         $this->transactions = $transactions;
         $this->recipients = $recipients;
@@ -25,7 +25,7 @@ final class CreateRawTransaction implements Command
 
     public function jsonSerialize(): object
     {
-        $addresses = [];
+        $addresses = [ ];
 
         foreach ($this->recipients as $recipient) {
             $addresses = array_merge($addresses, (array) $recipient->jsonSerialize());
