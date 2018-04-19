@@ -14,8 +14,8 @@ class CreateRawTransactionTest extends TestCase
             'method'  => 'createrawtransaction',
             'params' => [
                 [
-                    new RawTransaction('firstid', 1),
-                    new RawTransaction('secondid', 2),
+                    new RawTransaction('firstid', 1, null, null),
+                    new RawTransaction('secondid', 2, null, null),
                 ],
                 (object) [
                     'myfirstaddress' => 2.182,
@@ -25,8 +25,8 @@ class CreateRawTransactionTest extends TestCase
         ];
 
         $command = new CreateRawTransaction([
-            new RawTransaction('firstid', 1),
-            new RawTransaction('secondid', 2)
+            new RawTransaction('firstid', 1, null, null),
+            new RawTransaction('secondid', 2, null, null)
         ], [new Recipient('myfirstaddress', 2.182), new Recipient('mysecondaddress', 1.932)]);
 
         $this->assertEquals($expected, $command->jsonSerialize());
@@ -51,8 +51,8 @@ class CreateRawTransactionTest extends TestCase
         ];
 
         $command = new CreateRawTransaction([
-            new RawTransaction('firstid', 1),
-            new RawTransaction('secondid', 2)
+            new RawTransaction('firstid', 1, null, null),
+            new RawTransaction('secondid', 2, null, null)
         ], [new Recipient('myfirstaddress', 2.182), new Recipient('mysecondaddress', 1.932)]);
 
         $this->assertEquals(json_encode($expected), json_encode($command));
