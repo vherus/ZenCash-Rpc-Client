@@ -38,7 +38,7 @@ final class GetBlockTemplateValidator implements JsonValidator
                 );
             }
 
-            array_walk($decoded->capabilities, function ($item) {
+            array_walk($decoded->capabilities, function($item) {
                 if (!is_string($item)) {
                     throw new JsonFormatException("JSON property `capabilities` must only contain strings.");
                 }
