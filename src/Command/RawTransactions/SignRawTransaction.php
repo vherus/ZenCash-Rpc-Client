@@ -44,10 +44,25 @@ final class SignRawTransaction implements Command
             'method'  => self::METHOD,
             'params' => array_merge(
                 [ $this->hex ],
-                !empty($this->prevtxs) ? [ $this->prevtxs ] : [ ],
-                !empty($this->prevtxs) && !empty($this->privateKeys) ? [ $this->privateKeys ] : [ ],
-                (!empty($this->prevtxs) && !empty($this->privateKeys)) ? [ $this->sigHashType ] : [ ]
+                $this->getPrevtxsParam(),
+                $this->getPrivateKeysParam(),
+                $this->getSigHashTypeParam()
             )
         ];
+    }
+
+    private function getPrevtxsParam(): array
+    {
+        return !empty($this->prevtxs) ? [ $this->prevtxs ] : [ ];
+    }
+
+    private function getPrivateKeysParam(): array
+    {
+        return !empty($this->prevtxs) && !empty($this->privateKeys) ? [ $this->privateKeys ] : [ ];
+    }
+
+    private function getSigHashTypeParam(): array
+    {
+        return (!empty($this->prevtxs) && !empty($this->privateKeys)) ? [ $this->sigHashType ] : [ ];
     }
 }
