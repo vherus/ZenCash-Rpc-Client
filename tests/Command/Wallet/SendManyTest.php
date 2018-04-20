@@ -3,6 +3,7 @@
 namespace ZenCash\Rpc\Command\Wallet;
 
 use PHPUnit\Framework\TestCase;
+use ZenCash\Rpc\Command\Wallet\SendMany\Amount;
 
 class SendManyTest extends TestCase
 {

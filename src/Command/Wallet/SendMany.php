@@ -3,6 +3,7 @@
 namespace ZenCash\Rpc\Command\Wallet;
 
 use ZenCash\Rpc\Command;
+use ZenCash\Rpc\Command\Wallet\SendMany\Amount;
 
 final class SendMany implements Command
 {
@@ -14,7 +15,6 @@ final class SendMany implements Command
     private $subtractFromAddresses;
 
     /**
-     * SendMany constructor
      * @param Amount[] $amounts
      * @param int $minConfig
      * @param string $comment

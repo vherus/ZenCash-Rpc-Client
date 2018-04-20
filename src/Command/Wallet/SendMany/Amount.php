@@ -1,6 +1,6 @@
 <?php
 
-namespace ZenCash\Rpc\Command\Wallet;
+namespace ZenCash\Rpc\Command\Wallet\SendMany;
 
 final class Amount implements \JsonSerializable
 {
