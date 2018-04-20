@@ -7,14 +7,13 @@ use ZenCash\Rpc\Command;
 final class ListTransactions implements Command
 {
     private const METHOD = 'listtransactions';
-    private $account;
+    private $account = '*';
     private $count;
     private $from;
     private $includeWatchOnly;
 
-    public function __construct(string $account = '*', int $count = 10, int $from = 0, bool $includeWatchOnly = false)
+    public function __construct(int $count = 10, int $from = 0, bool $includeWatchOnly = false)
     {
-        $this->account = $account;
         $this->count = $count;
         $this->from = $from;
         $this->includeWatchOnly = $includeWatchOnly;

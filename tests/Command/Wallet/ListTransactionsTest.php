@@ -30,13 +30,13 @@ class ListTransactionsTest extends TestCase
             'id'      => 'curl',
             'method'  => 'listtransactions',
             'params' => [
-                'account1',
+                '*',
                 27,
                 3,
                 true
             ]
         ];
 
-        $this->assertEquals($expected, (new ListTransactions('account1', 27, 3, true))->jsonSerialize());
+        $this->assertEquals($expected, (new ListTransactions(27, 3, true))->jsonSerialize());
     }
 }
