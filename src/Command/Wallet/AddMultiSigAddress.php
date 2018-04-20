@@ -16,7 +16,7 @@ final class AddMultiSigAddress implements Command
      */
     public function __construct(int $nRequired, array $keys)
     {
-        call_user_func_array(function(string $key) {}, $keys);
+        call_user_func_array(function(string ...$key) {}, $keys);
 
         $this->nRequired = $nRequired;
         $this->keys = $keys;
