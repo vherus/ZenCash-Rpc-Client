@@ -37,10 +37,25 @@ final class SendToAddress implements Command
                 [
                     $this->address, $this->amount
                 ],
-                !is_null($this->comment) ? [ $this->comment ] : [ ],
-                !is_null($this->comment) && !is_null($this->commentTo) ? [ $this->commentTo ] : [ ],
-                $this->subtractFromAmount !== false ? [ $this->subtractFromAmount ] : [ ]
+                $this->getCommentParam(),
+                $this->getCommentToParam(),
+                $this->getSubtractFromAmountParam()
             )
         ];
+    }
+
+    private function getCommentParam(): array
+    {
+        return !is_null($this->comment) ? [ $this->comment ] : [ ];
+    }
+
+    private function getCommentToParam(): array
+    {
+        return !is_null($this->comment) && !is_null($this->commentTo) ? [ $this->commentTo ] : [ ];
+    }
+
+    private function getSubtractFromAmountParam(): array
+    {
+        return $this->subtractFromAmount !== false ? [ $this->subtractFromAmount ] : [ ];
     }
 }

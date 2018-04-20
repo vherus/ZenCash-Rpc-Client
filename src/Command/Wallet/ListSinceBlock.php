@@ -25,12 +25,27 @@ class ListSinceBlock implements Command
                 'id'      => Command::ID,
                 'method'  => self::METHOD,
                 'params' => array_merge(
-                    !is_null($this->hash) ? [ $this->hash ] : [ ],
-                    !is_null($this->hash) && !is_null($this->confirms) ? [ $this->confirms ] : [ ],
-                    !is_null($this->hash) && !is_null($this->confirms) && !is_null($this->watchOnly) ? [
-                        $this->watchOnly
-                    ] : [ ]
+                    $this->getHashParam(),
+                    $this->getConfirmsParam(),
+                    $this->getWatchOnlyParam()
                 )
         ];
+    }
+
+    private function getHashParam(): array
+    {
+        return !is_null($this->hash) ? [ $this->hash ] : [ ];
+    }
+
+    private function getConfirmsParam(): array
+    {
+        return !is_null($this->hash) && !is_null($this->confirms) ? [ $this->confirms ] : [ ];
+    }
+
+    private function getWatchOnlyParam(): array
+    {
+        return !is_null($this->hash) && !is_null($this->confirms) && !is_null($this->watchOnly) ? [
+            $this->watchOnly
+        ] : [ ];
     }
 }
